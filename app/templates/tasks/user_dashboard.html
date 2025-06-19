@@ -1,0 +1,32 @@
+app/templates/tasks/user_dashboard.html
+{% extends 'base.html' %}
+{% block title %}User Dashboard{% endblock %}
+
+{% block content %}
+<div class="user-dashboard">
+    <h2>Welcome, {{ current_user.username }}!</h2>
+
+    <div class="user-nav">
+        <ul>
+            <li><a href="{{ url_for('tasks.dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('tasks.user_tasks') }}">My Tasks</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="{{ url_for('tasks.notifications') }}">Notifications</a></li>
+            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="task-stats">
+        <h3>My Task Summary</h3>
+        <ul>
+            <li>Total Tasks: {{ task_stats.total }}</li>
+            <li>Due Today: {{ task_stats.due_today }}</li>
+            <li>Overdue: {{ task_stats.overdue }}</li>
+            <li>No Deadline: {{ task_stats.no_deadline }}</li>
+            <li>Pending: {{ task_stats.pending }}</li>
+            <li>In Progress: {{ task_stats.in_progress }}</li>
+            <li>Completed: {{ task_stats.completed }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

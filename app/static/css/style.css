@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fefbe9;
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background: #1a1a2e;
+  color: white;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nav {
+  list-style: none;
+  padding: 0;
+}
+
+.nav li a {
+  color: white;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.nav li a:hover,
+.nav li a.active {
+  background: #0f3460;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-add {
+  background: green;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-left: 5px;
+}

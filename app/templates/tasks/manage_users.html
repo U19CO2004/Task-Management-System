@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Users</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=1">
+</head> <!-- ✅ Fix added here -->
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('user_management.dashboard') }}">Dashboard</a></li>
+        <li><a href="{{ url_for('user_management.manage_users') }}">Manage Users</a></li>
+        <li><a href="{{ url_for('user_management.add_user') }}">Add User</a></li>
+        <li><a href="{{ url_for('user_management.logout') }}">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Manage Users</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>Username</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+          <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.full_name }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.role }}</td>
+            <td>
+              <a href="{{ url_for('tasks.edit_user', user_id=user.id) }}" class="btn btn-sm btn-warning">Edit</a>
+              <a href="{{ url_for('tasks.delete_user', user_id=user.id) }}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Employee Task Management System</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> -->
